@@ -11,6 +11,12 @@ public class FizzBuzzGame {
     public String numberOff(Integer integer) {
         StringBuilder builder = new StringBuilder();
 
+        commonCase(integer, builder);
+        String result = builder.toString();
+        return result.isEmpty() ? String.valueOf(integer) : result;
+    }
+
+    private void commonCase(Integer integer, StringBuilder builder) {
         if (integer % 3 == 0) {
             builder.append("Fizz");
         }
@@ -20,8 +26,6 @@ public class FizzBuzzGame {
         if (integer % 7 == 0) {
             builder.append("Whizz");
         }
-        String result = builder.toString();
-        return result.isEmpty() ? String.valueOf(integer) : result;
     }
 
     public static void main(String[] args) {
