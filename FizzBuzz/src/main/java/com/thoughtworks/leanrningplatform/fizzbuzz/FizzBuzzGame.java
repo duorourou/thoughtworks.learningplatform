@@ -9,16 +9,19 @@ public class FizzBuzzGame {
 
 
     public String numberOff(Integer integer) {
-        if (3 == integer) {
-            return "Fizz";
+        StringBuilder builder = new StringBuilder();
+
+        if (integer % 3 == 0) {
+            builder.append("Fizz");
         }
-        if (5 == integer) {
-            return "Buzz";
+        if (integer % 5 == 0) {
+            builder.append("Buzz");
         }
-        if (7 == integer) {
-            return "Whizz";
+        if (integer % 7 == 0) {
+            builder.append("Whizz");
         }
-        return String.valueOf(integer);
+        String result = builder.toString();
+        return result.isEmpty() ? String.valueOf(integer) : result;
     }
 
     public static void main(String[] args) {

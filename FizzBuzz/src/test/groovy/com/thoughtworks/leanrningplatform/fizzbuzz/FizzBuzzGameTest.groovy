@@ -14,6 +14,10 @@ class FizzBuzzGameTest extends Specification {
       3             || "Fizz"
       5             || "Buzz"
       7             || "Whizz"
+      3 * 5         || "FizzBuzz"
+      3 * 7         || "FizzWhizz"
+      5 * 7         || "BuzzWhizz"
+      3 * 5 * 7     || "FizzBuzzWhizz"
   }
 
 }
