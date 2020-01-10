@@ -9,7 +9,16 @@ public class FizzBuzzGame {
 
 
     public String numberOff(Integer integer) {
-        return "Fizz";
+        if (3 == integer) {
+            return "Fizz";
+        }
+        if (5 == integer) {
+            return "Buzz";
+        }
+        if (7 == integer) {
+            return "Whizz";
+        }
+        return String.valueOf(integer);
     }
 
     public static void main(String[] args) {

@@ -6,13 +6,14 @@ class FizzBuzzGameTest extends Specification {
 
   def fizzBuzzGame = new FizzBuzzGame();
 
-  def "it will return fizz"() {
-    given: "the student's number"
-      def studentNumber = 3
-    when:
-      def result = fizzBuzzGame.numberOff(studentNumber)
-    then:
-      result == "Fizz"
+  def "it will number off with student's numbers"() {
+    expect:
+      result == fizzBuzzGame.numberOff(studentNumber)
+    where:
+      studentNumber || result
+      3             || "Fizz"
+      5             || "Buzz"
+      7             || "Whizz"
   }
 
 }
