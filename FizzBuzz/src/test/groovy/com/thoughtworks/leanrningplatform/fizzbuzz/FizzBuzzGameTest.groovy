@@ -27,6 +27,10 @@ class FizzBuzzGameTest extends Specification {
       "contains 3 but not 5 and 7"         | 30            || "Fizz"
       "contains 5 and 3 and multiple of 7" | 35            || "BuzzWhizz"
       "contains 5 and multiple of 3"       | 345           || "Buzz"
+      "contains 7 and multiple of 3"       | 171           || "Fizz"
+      "contains 7 and contains 3"          | 273           || "Fizz"
+      "contains 7 and multiple of 5 and 3" | 75            || "Fizz"
+      "contains 7 and multiple of 7 and 3" | 147           || "FizzWhizz"
   }
 
 }

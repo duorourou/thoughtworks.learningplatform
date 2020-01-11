@@ -22,11 +22,20 @@ public class FizzBuzzGame {
         boolean ignore3 = false;
         boolean ignore5 = false;
         boolean ignore7 = false;
-        if (number.contains(BUZZ.keyWord)) {
+        if (number.contains(WHIZZ.keyWord)) {
+            ignore5 = true;
+        }
+
+        if (number.contains(BUZZ.keyWord) && !ignore5) {
             resultSet.add(BUZZ);
             ignore3 = true;
-        } else if (number.contains("3")) {
-            return "Fizz";
+        }
+
+        if (number.contains("3") && !ignore3) {
+            ignore3 = true;
+            ignore5 = true;
+            ignore7 = true;
+            resultSet.add(FIZZ);
         }
         commonCase(integer, resultSet, ignore3, ignore5, ignore7);
 
