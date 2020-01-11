@@ -12,19 +12,21 @@ class FizzBuzzGameTest extends Specification {
     expect:
       result == fizzBuzzGame.numberOff(studentNumber)
     where:
-      rule                               | studentNumber || result
-      "only multiple of 3"               | 3             || "Fizz"
-      "only multiple of 3"               | 6             || "Fizz"
-      "only multiple of 5"               | 5             || "Buzz"
-      "only multiple of 5"               | 10            || "Buzz"
-      "only multiple of 7"               | 7             || "Whizz"
-      "only multiple of 7"               | 14            || "Whizz"
-      "only multiple of 3 and 5"         | 3 * 5 * 4     || "FizzBuzz"
-      "only multiple of 3 and 7"         | 3 * 7         || "FizzWhizz"
-      "only multiple of 5 and 7"         | 5 * 7 * 4     || "BuzzWhizz"
-      "only multiple of 3 and 5 and 7"   | 3 * 5 * 7 * 2 || "FizzBuzzWhizz"
-      "contains 3 but not multiple of 3" | 13            || "Fizz"
-      "contains 3 but not multiple of 3" | 30            || "Fizz"
+      rule                                 | studentNumber || result
+      "only multiple of 3"                 | 3             || "Fizz"
+      "only multiple of 3"                 | 6             || "Fizz"
+      "only multiple of 5"                 | 5             || "Buzz"
+      "only multiple of 5"                 | 10            || "Buzz"
+      "only multiple of 7"                 | 7             || "Whizz"
+      "only multiple of 7"                 | 14            || "Whizz"
+      "only multiple of 3 and 5"           | 3 * 5 * 4     || "FizzBuzz"
+      "only multiple of 3 and 7"           | 3 * 7         || "FizzWhizz"
+      "only multiple of 5 and 7"           | 5 * 7 * 4     || "BuzzWhizz"
+      "only multiple of 3 and 5 and 7"     | 3 * 5 * 7 * 2 || "FizzBuzzWhizz"
+      "contains 3 but not multiple of 3"   | 13            || "Fizz"
+      "contains 3 but not 5 and 7"         | 30            || "Fizz"
+      "contains 5 and 3 and multiple of 7" | 35            || "BuzzWhizz"
+      "contains 5 and multiple of 3"       | 345           || "Buzz"
   }
 
 }
