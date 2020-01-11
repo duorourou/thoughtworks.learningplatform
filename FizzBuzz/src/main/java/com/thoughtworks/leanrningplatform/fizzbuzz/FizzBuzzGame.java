@@ -10,7 +10,10 @@ public class FizzBuzzGame {
 
     public String numberOff(Integer integer) {
         StringBuilder builder = new StringBuilder();
-
+        String number = String.valueOf(integer);
+        if (number.contains("3")) {
+            return "Fizz";
+        }
         commonCase(integer, builder);
         String result = builder.toString();
         return result.isEmpty() ? String.valueOf(integer) : result;
