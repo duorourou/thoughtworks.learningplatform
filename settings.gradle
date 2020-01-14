@@ -1,3 +1,4 @@
 rootProject.name = 'LearningPlatform'
 include 'FizzBuzz'
+include 'MarsRover'
 
