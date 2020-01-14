@@ -9,6 +9,6 @@ class DetectionZoneTest extends Specification {
     when:
       def detectionZone = new DetectionZone(10, 10)
     then:
-      detectionZone.contains(new DetectionZone.Point(9, 3))
+      detectionZone.contains(new DetectionZone.Position(9, 3))
   }
 }

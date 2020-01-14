@@ -14,17 +14,17 @@ public class DetectionZone {
         this.ordinateAxis = ordinateAxis;
     }
 
-    public boolean contains(Point point) {
-        return point.abscissa <= abscissaAxis
-                && point.ordinate <= ordinateAxis;
+    public boolean contains(Position position) {
+        return position.abscissa <= abscissaAxis
+                && position.ordinate <= ordinateAxis;
     }
 
     @Value
-    public static class Point {
+    public static class Position {
         private int abscissa;
         private int ordinate;
 
-        public Point(int abscissa, int ordinate) {
+        public Position(int abscissa, int ordinate) {
             assert abscissa >= 0;
             assert ordinate >= 0;
             this.abscissa = abscissa;
